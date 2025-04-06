@@ -1,0 +1,247 @@
+/* ========== التنسيق العام ========== */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    text-align: right;
+    background-image: url('backkk.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* ========== الهيدر ========== */
+header {
+    background-color: #241761;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+/* ========== القائمة ========== */
+nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+nav ul li {
+    display: inline;
+    margin: 0 2px;
+    background-color: #67e4b4;
+    padding: 5px 15px;
+    font-size: 14px;
+    position: relative;
+    z-index: 100;
+}
+nav ul li a {
+    color: #0c0c0c;
+    text-decoration: none;
+}
+
+/* ========== القسم الرئيسي ========== */
+.hero {
+    color: #fff;
+    padding: 100px 20px;
+    text-align: center;
+    flex: 1;
+}
+.hero-content h2 {
+    font-size: 3em;
+    margin: 0;
+    color: white;
+}
+.hero-content p {
+    font-size: 1.5em;
+    margin: 10px 0 20px;
+}
+
+/* ========== قسم الاتصال ========== */
+.contact {
+    padding: 30px 20px;
+    text-align: center;
+    background-color: #191636;
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 25%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.contact h2 {
+    font-size: 36px;
+    color: #eff5f0;
+    margin-bottom: 20px;
+}
+
+/* ========== الأزرار ========== */
+.btn {
+    background-color: #ff6f61;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* ========== قائمة الطعام ========== */
+.menu-section {
+    padding: 20px;
+    text-align: center;
+    color: #83df83;
+}
+.menu-section h2 {
+    color: white;
+}
+.menu-items {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.menu-item {
+    background-color: #fff;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 25%;
+}
+.menu-item img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+.menu-item h3 {
+    margin: 10px 0;
+}
+.menu-item p {
+    color: #555;
+}
+.menu-item .price {
+    display: block;
+    font-weight: bold;
+    color: #ff6f61;
+    margin-top: 10px;
+}
+
+/* ========== عن المطعم ========== */
+.about {
+    text-align: center;
+    color: #f4f4f4;
+}
+
+/* ========== الفوتر ========== */
+footer {
+    background-color: #10062c;
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: auto;
+}
+
+/* ========== الشريط العلوي ========== */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #6d49a8;
+}
+.navbar h1 {
+    color: white;
+    margin: 0;
+}
+.navbar .nav-buttons a {
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: white;
+    margin-left: 10px;
+    font-size: 16px;
+    font-weight: bold;
+}
+.navbar .login-btn {
+    background-color: #28a745;
+}
+.navbar .register-btn {
+    background-color: #007bff;
+}
+.navbar .nav-buttons a:hover {
+    opacity: 0.8;
+}
+
+/* ========== الفورم ========== */
+.login-container, .register-container {
+    width: 300px;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #120d3a;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+.login-container, .register-container h2 {
+    color: #eef1f1;
+}
+.register-container button {
+    background-color: #32d82c;
+}
+form {
+    display: flex;
+    flex-direction: column;
+}
+label {
+    text-align: right;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: rgb(247, 241, 241);
+}
+input {
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #fcfcf8;
+    border-radius: 5px;
+}
+
+/* ========== ميديا كويري (استجابة الشاشات) ========== */
+@media (max-width: 992px) {
+    .menu-item {
+        width: 45%;
+    }
+    .box {
+        flex: 1 1 50%;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .box,
+    .menu-item {
+        width: 90%;
+        flex: 1 1 100%;
+    }
+
+    .contact {
+        width: 90%;
+        padding: 20px;
+        top: auto;
+        left: auto;
+        transform: none;
+        margin: 20px auto;
+        position: relative;
+    }
+
+    body {
+        padding: 10px;
+    }
+}
