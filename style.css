@@ -3,10 +3,9 @@ html, body {
     height: 100%;
     margin: 0;
     padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* خط أكثر عصرية */
 }
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
     text-align: right;
     background-image: url('backkk.jpg');
     background-size: cover;
@@ -16,232 +15,366 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-}
-
-/* ========== الهيدر ========== */
-header {
-    background-color: #241761;
     color: #fff;
-    padding: 10px 0;
-    text-align: center;
 }
-
-/* ========== القائمة ========== */
+/* ========== تنسيق الهيدر ========== */
+header {
+    color: #fff;
+    padding: 0;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+/* ========== تنسيق القائمة ========== */
 nav ul {
     list-style: none;
     padding: 0;
     text-align: center;
+    margin: 15px 0;
 }
 nav ul li {
-    display: inline;
-    margin: 0 2px;
+    display: inline-block; /* تغيير من inline إلى inline-block لمزيد من التحكم */
+    margin: 0 5px;
     background-color: #67e4b4;
-    padding: 5px 15px;
-    font-size: 14px;
+    padding: 8px 20px;
+    font-size: 16px;
     position: relative;
     z-index: 100;
+    border-radius: 30px; /* حواف دائرية */
+    transition: all 0.3s ease; /* تأثير حركي سلس */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+nav ul li:hover {
+    background-color: #4dca9d;
+    transform: translateY(-2px); /* تأثير رفع عند التحويم */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 nav ul li a {
     color: #0c0c0c;
     text-decoration: none;
+    font-weight: 600;
 }
-
-/* ========== القسم الرئيسي ========== */
+/* ========== تنسيق القسم الرئيسي ========== */
 .hero {
     color: #fff;
     padding: 100px 20px;
     text-align: center;
     flex: 1;
+    background-color: transparent; /* إزالة الطبقة السوداء */
 }
 .hero-content h2 {
-    font-size: 3em;
+    font-size: 3.5em;
     margin: 0;
     color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-bottom: 20px;
 }
 .hero-content p {
     font-size: 1.5em;
-    margin: 10px 0 20px;
+    margin: 10px 0 30px;
+    line-height: 1.6;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
 }
-
-/* ========== قسم الاتصال ========== */
+/* ========== تنسيق قسم الاتصال ========== */
 .contact {
-    padding: 30px 20px;
+    padding: 40px;
     text-align: center;
-    background-color: #191636;
+    background-color: rgba(25, 22, 54, 0.9);
     margin: 10px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 25%;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    width: 30%;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    backdrop-filter: blur(5px); /* تأثير ضبابي خلفي */
 }
 .contact h2 {
     font-size: 36px;
     color: #eff5f0;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #67e4b4;
+    padding-bottom: 10px;
+    display: inline-block;
 }
-
-/* ========== الأزرار ========== */
+/* ========== تنسيق الأزرار ========== */
 .btn {
     background-color: #ff6f61;
     color: #fff;
-    padding: 10px 20px;
+    padding: 12px 30px;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 30px;
+    font-weight: bold;
+    display: inline-block;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
-
-/* ========== قائمة الطعام ========== */
+.btn:hover {
+    background-color: #e05a50;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+.btn:active {
+    transform: translateY(1px);
+}
+/* ========== تنسيق قائمة الطعام ========== */
 .menu-section {
-    padding: 20px;
+    padding: 50px 20px;
     text-align: center;
-    color: #83df83;
+    background-color: rgba(0, 0, 0, 0.6);
 }
 .menu-section h2 {
     color: white;
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 .menu-items {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     flex-wrap: wrap;
+    gap: 30px;
+    padding: 0 20px;
 }
 .menu-item {
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.95);
     margin: 10px;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 25%;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    width: 280px;
+    transition: all 0.3s ease;
+}
+.menu-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
 }
 .menu-item img {
     max-width: 100%;
-    border-radius: 5px;
+    border-radius: 8px;
+    height: 180px;
+    object-fit: cover;
+    margin-bottom: 15px;
 }
 .menu-item h3 {
-    margin: 10px 0;
+    margin: 15px 0;
+    color: #3b2772;
+    font-size: 1.4em;
 }
 .menu-item p {
     color: #555;
+    line-height: 1.6;
 }
 .menu-item .price {
     display: block;
     font-weight: bold;
     color: #ff6f61;
-    margin-top: 10px;
+    margin-top: 15px;
+    font-size: 1.3em;
 }
-
-/* ========== عن المطعم ========== */
+/* ========== تنسيق قسم "عن المطعم" ========== */
 .about {
     text-align: center;
-    color: #f4f4f4;
+    padding: 60px 20px;
+    background-color: rgba(25, 22, 54, 0.8);
 }
-
-/* ========== الفوتر ========== */
+.about h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    color: #67e4b4;
+}
+.about p {
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.8;
+    font-size: 1.1em;
+}
+/* ========== تنسيق الفوتر ========== */
 footer {
-    background-color: #10062c;
+    background-color: rgba(16, 6, 44, 0.95);
     color: #fff;
     text-align: center;
-    padding: 15px 0;
     margin-top: auto;
+    font-size: 0.9em;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 10px 0; /* تقليل المساحة الداخلية */
+    font-size: 0.8em; /* تصغير حجم الخط */
+    background-color: rgba(16, 6, 44, 0.8); /* جعل الخلفية أقل عتامة */
 }
-
-/* ========== الشريط العلوي ========== */
+/* ========== تنسيق الشريط العلوي ========== */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
-    background-color: #6d49a8;
+    padding: 15px 40px;
+    background-color: rgba(29, 25, 88, 0.9);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
 }
 .navbar h1 {
     color: white;
     margin: 0;
+    font-size: 1.5em; /* تصغير حجم عنوان الموقع */
+    margin-right: 20px; /* إضافة مسافة */
+    letter-spacing: 1px;
+}
+.navbar .nav-buttons {
+    display: flex;
+    gap: 15px;
 }
 .navbar .nav-buttons a {
     text-decoration: none;
-    padding: 10px 20px;
-    border-radius: 5px;
+    padding: 12px 25px;
+    border-radius: 30px;
     color: white;
-    margin-left: 10px;
     font-size: 16px;
     font-weight: bold;
+    transition: all 0.3s ease;
 }
 .navbar .login-btn {
-    background-color: #28a745;
+    background: linear-gradient(135deg, #28a745, #1e7e34);
 }
 .navbar .register-btn {
-    background-color: #007bff;
+    background: linear-gradient(135deg, #007bff, #0056b3);
 }
 .navbar .nav-buttons a:hover {
-    opacity: 0.8;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    opacity: 0.9;
 }
-
-/* ========== الفورم ========== */
+/* ========== تنسيق الفورم ========== */
 .login-container, .register-container {
-    width: 300px;
-    margin: 50px auto;
-    padding: 20px;
-    border-radius: 10px;
-    background-color: #120d3a;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    margin: 80px auto;
+    padding: 30px;
+    border-radius: 15px;
+    background-color: rgba(18, 13, 58, 0.95);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
     text-align: center;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
-.login-container, .register-container h2 {
-    color: #eef1f1;
-}
-.register-container button {
-    background-color: #32d82c;
+.login-container h2, .register-container h2 {
+    color: #fff;
+    margin-bottom: 30px;
+    font-size: 2em;
 }
 form {
     display: flex;
     flex-direction: column;
+    gap: 15px;
 }
 label {
     text-align: right;
     margin-bottom: 5px;
     font-weight: bold;
-    color: rgb(247, 241, 241);
+    color: #fff;
+    display: block;
 }
 input {
-    padding: 8px;
-    margin-bottom: 10px;
-    border: 1px solid #fcfcf8;
-    border-radius: 5px;
+    padding: 12px 15px;
+    margin-bottom: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    font-size: 16px;
+    transition: all 0.3s ease;
 }
-
-/* ========== ميديا كويري (استجابة الشاشات) ========== */
+input:focus {
+    outline: none;
+    border-color: #67e4b4;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+.register-container button {
+    background: linear-gradient(135deg, #32d82c, #28a745);
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 16px;
+    margin-top: 10px;
+}
+.register-container button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+/* ========== التأثيرات على الروابط ========== */
+a {
+    transition: all 0.3s ease;
+}
+/* ========== Media Queries للاستجابة للشاشات الصغيرة ========== */
+@media (max-width: 1200px) {
+    .contact {
+        width: 50%;
+    }
+}
 @media (max-width: 992px) {
     .menu-item {
-        width: 45%;
+        width: calc(50% - 40px);
     }
-    .box {
-        flex: 1 1 50%;
+    .contact {
+        width: 70%;
     }
 }
-
 @media (max-width: 768px) {
-    .container {
+    .navbar {
         flex-direction: column;
+        padding: 15px;
     }
-
-    .box,
+    .navbar h1 {
+        margin-bottom: 15px;
+    }
     .menu-item {
-        width: 90%;
-        flex: 1 1 100%;
+        width: 100%;
+        max-width: 400px;
     }
-
     .contact {
         width: 90%;
-        padding: 20px;
-        top: auto;
-        left: auto;
-        transform: none;
-        margin: 20px auto;
-        position: relative;
+        padding: 30px 15px;
     }
-
-    body {
-        padding: 10px;
+    .hero-content h2 {
+        font-size: 2.5em;
     }
+    .hero-content p {
+        font-size: 1.2em;
+    }
+}
+@media (max-width: 480px) {
+    nav ul li {
+        display: block;
+        margin: 10px auto;
+        width: 80%;
+    }
+    .navbar .nav-buttons {
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+    }
+    .navbar .nav-buttons a {
+        width: 100%;
+        text-align: center;
+    }
+    .login-container, .register-container {
+        width: 90%;
+        padding: 20px 15px;
+    }
+}
+/* إزالة أي خلفيات سوداء من جميع العناصر */
+body, .hero, .menu-section, .about {
+    background-color: transparent !important;
+    background-image: url('backkk.jpg');
+    background-size: cover;
+    background-attachment: fixed;
 }
