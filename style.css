@@ -35,7 +35,7 @@ nav ul li {
     display: inline-block; /* تغيير من inline إلى inline-block لمزيد من التحكم */
     margin: 0 5px;
     background-color: #67e4b4;
-    padding: 8px 20px;
+    padding: 8px 10px;
     font-size: 16px;
     position: relative;
     z-index: 100;
